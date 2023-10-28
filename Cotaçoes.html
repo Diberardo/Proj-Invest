@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cotações de Moedas</title>
+    <link rel="stylesheet" type="text/css" href="Cotaçoes.css">
+    <link rel="icon" href="./Img/dalle-image411.png">
+</head>
+<body>
+    <h1>Cotações de Moedas</h1>
+    <div class="container" id="jobpage">
+		<header>
+			<nav>
+				<div class="nav-container">
+			        <a href="paginaInicial.html">
+			        <img id="logo" src="img/dalle-image411.png" alt="logo">
+			        </a>
+					<i class="fas fa-bars btn-menumobile"></i>
+					<ul>
+						<li><a href="investimentos.html">Investimentos</a></li>
+                        <li><a href="Chhatbot.html">ChatBot</a></li>
+                        <li><a href="Carteira.html">Carteira</a></li>
+						<li><a href="Imposto.html">Imposto</a></li>
+						<li><a href="Cotaçoes.html">Cotaçoes</a></li>
+                        <li><a href="perfil.html">Perfil</a></li>
+						<li><a href="contato.html">Contato</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+        <div id="espas"></div>
+
+    <div id="resultado"></div>
+
+    <script>
+        // URL da API
+        const apiURL1 = 'http://economia.awesomeapi.com.br/USD-BRL/1?format=xml';
+        const apiURL2 = 'http://economia.awesomeapi.com.br/json/last/USD-BRL,EUR-BRL,BTC-BRL';
+
+        // Função para fazer solicitação à API e exibir os resultados
+        function fetchData(url, callback) {
+            fetch(url)
+                .then(response => response.json())
+                .then(data => callback(data))
+                .catch(error => console.error('Erro ao buscar dados da API', error));
+        }
+
+        // Exibir os resultados da primeira API
+        fetchData(apiURL1, data => {
+            const resultado1 = data['USDBRL'];
+            const html1 = `
+                <h2>${resultado1['code']}</h2>
+                Nome: ${resultado1['name']}<br>
+                Alta: ${resultado1['high']}<br>
+                Baixa: ${resultado1['low']}<br>
+                Variação: ${resultado1['varBid']}<br>
+                Percentual de Mudança: ${resultado1['pctChange']}<br>
+                Oferta de Compra: ${resultado1['bid']}<br>
+                Oferta de Venda: ${resultado1['ask']}<br>
+                Data de Criação: ${resultado1['create_date']}<br>
+            `;
+            document.getElementById('resultado').innerHTML += html1;
+        });
+
+        // Exibir os resultados da segunda API
+        fetchData(apiURL2, data => {
+            for (const key in data) {
+                const resultado2 = data[key];
+                const html2 = `
+                    <h2>${resultado2['code']}</h2>
+                    Nome: ${resultado2['name']}<br>
+                    Alta: ${resultado2['high']}<br>
+                    Baixa: ${resultado2['low']}<br>
+                    Variação: ${resultado2['varBid']}<br>
+                    Percentual de Mudança: ${resultado2['pctChange']}<br>
+                    Oferta de Compra: ${resultado2['bid']}<br>
+                    Oferta de Venda: ${resultado2['ask']}<br>
+                    Data de Criação: ${resultado2['create_date']}<br>
+                `;
+                document.getElementById('resultado').innerHTML += html2;
+            }
+        });
+    </script>
+</body>
+</html>

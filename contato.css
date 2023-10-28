@@ -1,0 +1,164 @@
+body
+{
+    background-image: url("Img/renko.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+}
+/* geral */
+html {
+	font-family: 'Open Sans', sans-serif;
+}
+
+body {
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, p, span {
+	margin: 0;
+	color: #666;
+}
+
+.container {
+	max-width: 1920px;
+	width: 100%;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* hide on desktop */
+.nav-container .btn-menumobile {
+	display: none;
+}
+
+/* header */
+header {
+	position: relative;
+	top: 0;
+	height: auto;
+	width: 100%;
+}
+
+/* navbar */
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100px;
+	width: 100%;
+	z-index: 1;
+	background-color: #FFF;
+	border-bottom: 1px solid #CCC;
+}
+
+nav:after 
+{
+	clear: both;
+	content: "";
+	display: block;
+}
+
+.nav-container 
+{
+	max-width: 1200px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#logo 
+{
+	width: 59px;
+	height: 60px;
+	margin-top: 25px;
+    float: left;
+}
+
+.nav-container ul 
+{
+	float: right;
+	height: 100px;
+	line-height: 100px;
+	margin: 0;
+}
+
+.nav-container ul li 
+{
+	list-style: none;
+	float: left;
+	margin: 0 15px;
+}
+
+.nav-container li a 
+{
+	text-decoration: none;
+	color: #666;
+	transition: .5s;
+}
+
+.nav-container li a:hover 
+{
+	color: #3381f3;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+#espas
+{
+	padding: 40px;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.contact-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}

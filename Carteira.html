@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./Img/dalle-image411.png">
+    <link rel="stylesheet" type="text/css" href="Carteira.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Minha Carteira de Investimentos</title>
+</head>
+<body>
+    <div class="container" id="jobpage">
+		<header>
+			<nav>
+				<div class="nav-container">
+			        <a href="paginaInicial.html">
+			        <img id="logo" src="img/dalle-image411.png" alt="logo">
+			        </a>
+					<i class="fas fa-bars btn-menumobile"></i>
+					<ul>
+						<li><a href="investimentos.html">Investimentos</a></li>
+                        <li><a href="Chhatbot.html">ChatBot</a></li>
+                        <li><a href="Carteira.html">Carteira</a></li>
+                        <li><a href="Imposto.html">Imposto</a></li>
+                        <li><a href="Cotaçoes.html">Cotaçoes</a></li>
+                        <li><a href="perfil.html">Perfil</a></li>
+						<li><a href="contato.html">Contato</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+        <div id="espas"></div>
+    <div class="portfolio-container">
+        <h1>Minha Carteira de Investimentos</h1>
+        <div class="investment">
+            <h2>Ações</h2>
+            <p>Empresa A: 100 ações</p>
+            <p>Empresa B: 50 ações</p>
+        </div>
+        <div class="investment">
+            <h2>Renda Fixa</h2>
+            <p>Título C: R$10,000</p>
+            <p>Título D: R$5,000</p>
+        </div>
+        <div class="investment">
+            <h2>Fundos de Investimento</h2>
+            <p>Fundo X: R$20,000</p>
+            <p>Fundo Y: R$15,000</p>
+        </div>
+    </div>
+    <table id="ta">
+    <tr>
+        <td>Ativo</td>
+        <td>Quantidade</td>
+        <td>Preço Medio</td>
+        <td>Cotação</td>
+        <td>Mercado</td>
+        <td>Lucro Dia R$</td>
+        <td>Proventos</td>
+        <td>Tributavel</td>
+        <td>Lucro Total R$</td>
+    </tr>
+    <tr>
+        <td>Ação 1</td>
+        <td>Valores em RS ??</td>
+        <td>Valores em RS ??</td>
+        <td>Valores em RS ??</td>
+        <td>Valores em RS ??</td>
+        <td>Valores em RS ??</td>
+        <td>Valores em RS ??</td>
+        <td>Valores em RS ??</td>
+        <td>Valores em RS ??</td>
+    </tr>
+    <tr>
+        <td>Ação 2</td>
+        <td>Valores em RS ??</td>
+        <td>Valores em RS ??</td>
+        <td>Valores em RS ??</td>
+        <td>Valores em RS ??</td>
+        <td>Valores em RS ??</td>
+        <td>Valores em RS ??</td>
+        <td>Valores em RS ??</td>
+        <td>Valores em RS ??</td>
+    </tr>
+    </table> 
+    <div id="espass"></div>
+    <div style="width: 80%; margin: 0 auto;" id="gra">
+        <canvas id="meuGrafico"></canvas>
+    </div>
+    <script>
+        // Dados para o gráfico
+        var data = {
+            labels: ['VALE3','RENT3','WEGE3','GGBR4','PETR4'],
+            datasets: [{
+                label: 'Ações Lucro',
+                data: [0.12, 0.19, 0.03, -0.05, 0.02],
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+            }]
+        };
+
+        // Configurações do gráfico
+        var options = {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        };
+
+        // Criar o gráfico
+        var ctx = document.getElementById('meuGrafico').getContext('2d');
+        var meuGrafico = new Chart(ctx, {
+            type: 'bar',
+            data: data,
+            options: options
+        });
+    </script>
+</body>
+</html>

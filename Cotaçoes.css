@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    background-image: url("Img/renko.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+}
+html {
+	font-family: 'Open Sans', sans-serif;
+}
+
+body {
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, p, span {
+	margin: 0;
+	color: #666;
+}
+
+.container {
+	max-width: 1920px;
+	width: 100%;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* hide on desktop */
+.nav-container .btn-menumobile {
+	display: none;
+}
+
+/* header */
+header {
+	position: relative;
+	top: 0;
+	height: auto;
+	width: 100%;
+}
+
+/* navbar */
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100px;
+	width: 100%;
+	z-index: 1;
+	background-color: #FFF;
+	border-bottom: 1px solid #CCC;
+}
+
+nav:after 
+{
+	clear: both;
+	content: "";
+	display: block;
+}
+
+.nav-container 
+{
+	max-width: 1200px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#logo 
+{
+	width: 59px;
+	height: 60px;
+	margin-top: 25px;
+    float: left;
+}
+
+.nav-container ul 
+{
+	float: right;
+	height: 100px;
+	line-height: 100px;
+	margin: 0;
+}
+
+.nav-container ul li 
+{
+	list-style: none;
+	float: left;
+	margin: 0 15px;
+}
+
+.nav-container li a 
+{
+	text-decoration: none;
+	color: #666;
+	transition: .5s;
+}
+
+.nav-container li a:hover 
+{
+	color: #3381f3;
+}
+
+h1 {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+#resultado {
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.cotacao {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 20px;
+}
+#espas
+{
+    padding: 9%;
+}
